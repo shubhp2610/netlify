@@ -15,7 +15,7 @@ router.get('/',(req,res)=>{
   result +="-";
  }
   
- res.json({"SUCCESS" : result});
+ res.json({"SUCCESS" : result.slice(0, -1)});
 });
 
 app.use(`/.netlify/functions/api`, router);
